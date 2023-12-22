@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manager List</h1>
+    <table>
+        <tr>
+            <th>Department ID</th>
+            <th>Manager Name</th>
+        </tr>
+        {% for manager in manager_list %}
+        <tr>
+            <td>{{ manager.dept_name }}</td>
+            <td>{{ manager.manager_name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
